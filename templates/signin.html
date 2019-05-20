@@ -1,11 +1,9 @@
-<html>
-<head>
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %} 로그인 {%endblock title %}
+{% block content %}
 	<form action="/signin" method="POST">
-		<input type="email" name="userEmail"/>
-		<input type="password" name="userPassword"/>
+	<p> Email :    <input type="email" name="userEmail"/></p>
+	<p> Password : <input type="password" name="userPassword"/></p>
 		<input type="submit" value="로그인"/>
 	</form>
-</body>
-</html>
+{% endblock content %}

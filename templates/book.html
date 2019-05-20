@@ -1,16 +1,9 @@
-<html>
-<head>
-<title> 도서관 시스템 </title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %} 도서관 시스템 {% endblock title %}
+{% block content %}
 	<h1> 도서관 시스템</h1>
-        <form action="/books" method="get">
-                <input type="submit" value="책 리스트">
-        </form>
-	<form action="/register" method="get">
-		<input type="submit" value="책 추가">
-	</form>
-</body>
-
-</html>
-
+	<h2> 환영합니다. {{info}}! </h2>
+	<a href ="/books"><input type="button" value=" 책 리스트"></a>
+	<a href ="/register"><input type="button" value=" 책 추가 "></a>
+	<a href ="/logout"><input type="button" value=" 로그아웃 "></a>
+{% endblock content %}
